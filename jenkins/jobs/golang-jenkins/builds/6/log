@@ -1,0 +1,60 @@
+Started by user [8mha:////4NPW1msuU1zYl7J6Up7AlINC8slss1e07M9TW3CtqNKxAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/jobs/golang-jenkins/workspace
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/sabeehah123/golang.git
+ > git init /var/jenkins_home/jobs/golang-jenkins/workspace # timeout=10
+Fetching upstream changes from https://github.com/sabeehah123/golang.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/sabeehah123/golang.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/sabeehah123/golang.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/sabeehah123/golang.git # timeout=10
+Fetching upstream changes from https://github.com/sabeehah123/golang.git
+ > git fetch --tags --progress https://github.com/sabeehah123/golang.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/master
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 0ecb01a8fe450cb2c2075bf7c9e0be0e03880c41 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0ecb01a8fe450cb2c2075bf7c9e0be0e03880c41
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b master 0ecb01a8fe450cb2c2075bf7c9e0be0e03880c41
+Commit message: "delete"
+ > git rev-list --no-walk 0ecb01a8fe450cb2c2075bf7c9e0be0e03880c41 # timeout=10
+[workspace] $ /bin/bash /tmp/jenkins5342875149902809504.sh
+master
+3c8aba11d67e        golang:master          "/opt/golang/main"       About a minute ago   Up About a minute                         golang-master
+golang-master
+3c8aba11d67e        golang:master          "/opt/golang/main"       About a minute ago   Exited (2) Less than a second ago                         golang-master
+golang-master
+de67c96c97b7
+Untagged: golang:master
+Deleted: sha256:de67c96c97b7a3d8be7ace8b3ef8c61a009a85aebe06d95082c6a5f8e20a0ee2
+Deleted: sha256:cec6e4f307dfe9ac48095f98aad418c74c9a4b4bd3be8be8812dd2d56d812c88
+Deleted: sha256:42d3c2b89e9774c17272312920c7054e8542d4f13e341c7f5f94974e22daf050
+Deleted: sha256:3f8c4d77ec392c6051782c22b1ccc05d03da46fd9b3724bca74144e14e384e0f
+Deleted: sha256:c97baff257db78917e1363d41bdc4c4f60ed1403987d71bffed41b2bee44b88a
+Deleted: sha256:51e5670ade3d55fa59ecb091a6d26d95f24d2954df39425741f5338a832d50b1
+Sending build context to Docker daemon  17.39MB
+Step 1/5 : FROM golang
+ ---> df6ac9d1bf64
+Step 2/5 : COPY main /opt/golang/main
+ ---> 1c60b4944329
+Removing intermediate container 275cc1b9e67c
+Step 3/5 : COPY static /opt/golng/static
+ ---> 12c90be4879f
+Removing intermediate container 6ab7e823b47b
+Step 4/5 : WORKDIR /opt/golang
+ ---> baef7392fa20
+Removing intermediate container 6a535324d58c
+Step 5/5 : ENTRYPOINT /opt/golang/main
+ ---> Running in 49c54f39e92c
+ ---> 822a3dff9932
+Removing intermediate container 49c54f39e92c
+Successfully built 822a3dff9932
+ce95d98f33fe2023eb5d4ecb43f78a314e400fba91ea7d601a0e8c8ba158b325
+2018/11/21 15:04:11 [notice] 26#26: signal process started
+Finished: SUCCESS

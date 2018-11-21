@@ -1,0 +1,78 @@
+Started by user [8mha:////4NPW1msuU1zYl7J6Up7AlINC8slss1e07M9TW3CtqNKxAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/jobs/golang-jenkins/workspace
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/sabeehah123/golang.git
+ > git init /var/jenkins_home/jobs/golang-jenkins/workspace # timeout=10
+Fetching upstream changes from https://github.com/sabeehah123/golang.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/sabeehah123/golang.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/sabeehah123/golang.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/sabeehah123/golang.git # timeout=10
+Fetching upstream changes from https://github.com/sabeehah123/golang.git
+ > git fetch --tags --progress https://github.com/sabeehah123/golang.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/master
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 0ecb01a8fe450cb2c2075bf7c9e0be0e03880c41 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0ecb01a8fe450cb2c2075bf7c9e0be0e03880c41
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b master 0ecb01a8fe450cb2c2075bf7c9e0be0e03880c41
+Commit message: "delete"
+ > git rev-list --no-walk 0ecb01a8fe450cb2c2075bf7c9e0be0e03880c41 # timeout=10
+[workspace] $ /bin/bash /tmp/jenkins2594838004364571987.sh
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.196 s
+[INFO] Finished at: 2018-11-21T14:57:49+00:00
+[INFO] Final Memory: 6M/54M
+[INFO] ------------------------------------------------------------------------
+[ERROR] The goal you specified requires a project to execute but there is no POM in this directory (/var/jenkins_home/jobs/golang-jenkins/workspace). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+master
+a1d818d4e688        golang:master          "/opt/golang/main"       6 minutes ago       Up 6 minutes                              golang-master
+golang-master
+a1d818d4e688        golang:master          "/opt/golang/main"       6 minutes ago       Exited (2) Less than a second ago                         golang-master
+golang-master
+e904f2e96692
+Untagged: golang:master
+Deleted: sha256:e904f2e966923af0e34dcdd7c8519a0746b9c268a3c6bfd8e7d43d03cfa29f80
+Deleted: sha256:a781248fd1d0ad7510dedfd5dbb0c205a71efdf4fbb94c3e4c4c0c0560167596
+Deleted: sha256:16eb31d29eddc1aff8b4e7e7cde2f066d14f3da9eb4d32df2cfd349b5bce1ff9
+Deleted: sha256:8a75d3e145ee2ddfcb922e6200fd1f6f4d2ba02962bf8c6ff8f93f18eb66282f
+Deleted: sha256:1e52613c18314a9355f1faa2a85c0088c631a77fe26ef78afebeca90f7077bd2
+Deleted: sha256:312edff6502d1292ecc8466f211acadfed75c089df632d5cee024750bc68925d
+Sending build context to Docker daemon  17.39MB
+Step 1/5 : FROM golang
+ ---> df6ac9d1bf64
+Step 2/5 : COPY main /opt/golang/main
+ ---> 5f0e84ab78b1
+Removing intermediate container 878903bd8e05
+Step 3/5 : COPY static /opt/golng/static
+ ---> 57bcbd7649bb
+Removing intermediate container 5305c4d79d43
+Step 4/5 : WORKDIR /opt/golang
+ ---> 0950a48613e7
+Removing intermediate container 5525af8fc46b
+Step 5/5 : ENTRYPOINT /opt/golang/main
+ ---> Running in 73de8c790351
+ ---> 62a297f0714b
+Removing intermediate container 73de8c790351
+Successfully built 62a297f0714b
+70d86f91a8fc3c103d4fb8a73371ee07af408f1648b0a773872c62569641e912
+Error response from daemon: network golang-ci_default not found
+2018/11/21 14:57:51 [emerg] 18#18: host not found in upstream "golang-master" in /etc/nginx/conf.d/golang-master.conf:2
+nginx: [emerg] host not found in upstream "golang-master" in /etc/nginx/conf.d/golang-master.conf:2
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
